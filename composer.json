@@ -1,0 +1,20 @@
+{
+    "name": "sitec/image-optimizer",
+    "description": "SDK para PHP de image-optimizer.com",
+    "type": "project",
+    "authors": [
+        {
+            "name": "SiTEC",
+            "email": "contacto@sistemasespecializados.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Mpsoft\\ImageOptimizer\\": "src/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "7.0"
+    }
+}
