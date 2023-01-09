@@ -14,7 +14,7 @@ use \Throwable;
 class ImageOptimizer
 {
     private $token = NULL;
-    private $host = "image-optimizer.svc-sitec.com";
+    private $host = "image-optimizer.sitec-mx.com";
 
     private $guzzle = NULL;
     private $openapi = NULL;
