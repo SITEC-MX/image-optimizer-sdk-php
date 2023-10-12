@@ -92,7 +92,7 @@ class ImageOptimizer
         {
             // Generamos las opciones
             $opciones = array();
-            $opciones["auth"] = array("app", $this->token);
+            $opciones["auth"] = array("io", $this->token);
 
             if($body)
             {

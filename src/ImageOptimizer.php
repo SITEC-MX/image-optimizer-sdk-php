@@ -92,7 +92,7 @@ class ImageOptimizer
         {
             // Generamos las opciones
             $opciones = array();
-            $opciones["auth"] = array("app", $this->token);
+            $opciones["auth"] = array("io", $this->token);
 
             if($body)
             {
@@ -139,5 +139,23 @@ class ImageOptimizer
 
 
 	public function POST_Optimizar(?array $variables=NULL,?array $querystrings=NULL,?array $body=NULL){ $url = "optimizar"; return $this->API_CALL("POST", $url, $variables, $querystrings, $body); }
+	public function POST_SesionLogin(?array $variables=NULL,?array $querystrings=NULL,?array $body=NULL){ $url = "sesion/login"; return $this->API_CALL("POST", $url, $variables, $querystrings, $body); }
+	public function POST_SesionLogout(?array $variables=NULL,?array $querystrings=NULL,?array $body=NULL){ $url = "sesion/logout"; return $this->API_CALL("POST", $url, $variables, $querystrings, $body); }
+	public function POST_SesionCuenta(?array $variables=NULL,?array $querystrings=NULL,?array $body=NULL){ $url = "sesion/cuenta"; return $this->API_CALL("POST", $url, $variables, $querystrings, $body); }
+	public function POST_SesionConfirmar(?array $variables=NULL,?array $querystrings=NULL,?array $body=NULL){ $url = "sesion/confirmar"; return $this->API_CALL("POST", $url, $variables, $querystrings, $body); }
+	public function POST_SesionSolicitarNuevaContrasena(?array $variables=NULL,?array $querystrings=NULL,?array $body=NULL){ $url = "sesion/solicitar-nueva-contrasena"; return $this->API_CALL("POST", $url, $variables, $querystrings, $body); }
+	public function POST_SesionCambiarContrasena(?array $variables=NULL,?array $querystrings=NULL,?array $body=NULL){ $url = "sesion/cambiar-contrasena"; return $this->API_CALL("POST", $url, $variables, $querystrings, $body); }
+	public function GET_Servicios(?array $variables=NULL,?array $querystrings=NULL){ $url = NULL; $variables_key = $this->ObtenerFirmaDeVariables($variables); switch($variables_key) { case "": $url = "servicios"; break; case "id": $url = "servicios/<id>"; break;  default: $url = "servicios/<id>"; break; } return $this->API_CALL("GET", $url, $variables, $querystrings, NULL); }
+	public function POST_Servicios(?array $variables=NULL,?array $querystrings=NULL,?array $body=NULL){ $url = "servicios"; return $this->API_CALL("POST", $url, $variables, $querystrings, $body); }
+	public function PATCH_Servicios(?array $variables=NULL,?array $querystrings=NULL,?array $body=NULL){ $url = "servicios/<id>"; return $this->API_CALL("PATCH", $url, $variables, $querystrings, $body); }
+	public function DELETE_Servicios(?array $variables=NULL,?array $querystrings=NULL){ $url = "servicios/<id>"; return $this->API_CALL("DELETE", $url, $variables, $querystrings, NULL); }
+	public function GET_Cuentas(?array $variables=NULL,?array $querystrings=NULL){ $url = NULL; $variables_key = $this->ObtenerFirmaDeVariables($variables); switch($variables_key) { case "": $url = "cuentas"; break; case "id": $url = "cuentas/<id>"; break;  default: $url = "cuentas/<id>"; break; } return $this->API_CALL("GET", $url, $variables, $querystrings, NULL); }
+	public function POST_Cuentas(?array $variables=NULL,?array $querystrings=NULL,?array $body=NULL){ $url = "cuentas"; return $this->API_CALL("POST", $url, $variables, $querystrings, $body); }
+	public function PATCH_Cuentas(?array $variables=NULL,?array $querystrings=NULL,?array $body=NULL){ $url = "cuentas/<id>"; return $this->API_CALL("PATCH", $url, $variables, $querystrings, $body); }
+	public function DELETE_Cuentas(?array $variables=NULL,?array $querystrings=NULL){ $url = "cuentas/<id>"; return $this->API_CALL("DELETE", $url, $variables, $querystrings, NULL); }
+	public function GET_Suscripciones(?array $variables=NULL,?array $querystrings=NULL){ $url = NULL; $variables_key = $this->ObtenerFirmaDeVariables($variables); switch($variables_key) { case "": $url = "suscripciones"; break; case "id": $url = "suscripciones/<id>"; break;  default: $url = "suscripciones/<id>"; break; } return $this->API_CALL("GET", $url, $variables, $querystrings, NULL); }
+	public function POST_Suscripciones(?array $variables=NULL,?array $querystrings=NULL,?array $body=NULL){ $url = "suscripciones"; return $this->API_CALL("POST", $url, $variables, $querystrings, $body); }
+	public function PATCH_Suscripciones(?array $variables=NULL,?array $querystrings=NULL,?array $body=NULL){ $url = "suscripciones/<id>"; return $this->API_CALL("PATCH", $url, $variables, $querystrings, $body); }
+	public function DELETE_Suscripciones(?array $variables=NULL,?array $querystrings=NULL){ $url = "suscripciones/<id>"; return $this->API_CALL("DELETE", $url, $variables, $querystrings, NULL); }
 
 }
