@@ -22,6 +22,35 @@ class ImageOptimizer
     public const NO_IMPLEMENTADO = 0;
     public const ENDPOINT_ERROR_GENERAR = 950;
     public const RESPUESTA_NO_DISPONIBLE = 951;
+	public const OK = 1;
+
+    public const OPERADOR_IGUAL = 1;
+    public const OPERADOR_MAYORQUE = 2;
+    public const OPERADOR_MAYOROIGUALQUE = 3;
+    public const OPERADOR_MENORQUE = 4;
+    public const OPERADOR_MENOROIGUALQUE = 5;
+    public const OPERADOR_DIFERENTE = 6;
+    public const OPERADOR_LIKE = 7;
+    public const OPERADOR_IN = 8;
+    public const OPERADOR_IGUAL_BINARIO = 9;
+    public const OPERADOR_NOT_IN = 10;
+
+    public const LOGICA_Y = 1;
+    public const LOGICA_O = 2;
+
+    public const DATO_BOOL = 1;
+    public const DATO_CHAR = 2;
+    public const DATO_INT = 3;
+    public const DATO_FLOAT = 4;
+    public const DATO_DOUBLE = 5;
+    public const DATO_STRING = 6;
+    public const DATO_DATE = 7;
+    public const DATO_DATETIME = 8;
+    public const DATO_TEXT = 9;
+    public const DATO_TIME = 10;
+    public const DATO_OBJECT = 11;
+    public const DATO_ARRAY = 12;
+    public const DATO_FILE = 13;
 
     function __construct(string $token)
     {
